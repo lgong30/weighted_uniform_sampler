@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{tikz,calc}
+\usetikzlibrary{shapes}
+\usepackage{tikz-qtree}
+\begin{document}
+\tikzset{every tree node/.style={rectangle split,rectangle split parts=3,draw,text centered},
+         blank/.style={draw=none},
+         edge from parent/.style=
+         {draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+         level distance=1.5cm}
+\begin{tikzpicture}
+\input{tree.tex}
+\end{tikzpicture}
+\end{document}
